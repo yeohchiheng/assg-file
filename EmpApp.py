@@ -141,7 +141,7 @@ def attendance():
         if user:
 
          try:
-            cursor.execute('Update employee SET an_leave = %d, med_leave = %d, un_leave = %d WHERE emp_id = %s', (an_leave, med_leave, un_leave, emp_id))
+            cursor.execute('Update employee SET an_leave = %s, med_leave = %s, un_leave = %s WHERE emp_id = %s', (an_leave, med_leave, un_leave, emp_id))
             db_conn.commit()
             msg="Updated"
          except:
